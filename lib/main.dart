@@ -113,13 +113,14 @@ class Avatar extends StatefulWidget {
 class _AvatarState extends State<Avatar> {
   TextEditingController controllerText = TextEditingController();
   Flutter3DController controller = Flutter3DController();
-  String chosenAnimation = 'lib/assets/PauseMode.glb';
+  String chosenAnimation = 'assets/AuRevoir1.glb';
   String myText = '';
+
+
+
 
   void play() {
     controller.playAnimation(animationName: chosenAnimation);
-
-
     }
 
   @override
@@ -147,22 +148,22 @@ class _AvatarState extends State<Avatar> {
                 setState(() {
                   myText = text;
                   if (myText.isEmpty) {
-                    chosenAnimation='lib/assets/PauseMode.glb';
+                    chosenAnimation='assets/AuRevoir1.glb';
                   }
                   else if (myText == 'Au revoir') {
-                    chosenAnimation = 'lib/assets/AuRevoir1.glb';
+                    chosenAnimation = 'assets/AuRevoir1.glb';
                   }
                   else if (myText =='nom') {
-                    chosenAnimation ='lib/assets/lenom.glb';
+                    chosenAnimation ='assets/lenom.glb';
                   }
                   else if (myText =='cv?') {
-                    chosenAnimation ='lib/assets/CaVa.glb';
+                    chosenAnimation ='assets/CaVa.glb';
                   }
                   else if (myText =='prenom') {
-                    chosenAnimation ='lib/assets/leprenom.glb';
+                    chosenAnimation ='assets/leprenom.glb';
                   }
                   else {
-                    chosenAnimation = 'assets/avatar/PauseMode.glb';
+                    chosenAnimation = 'assets/AuRevoir1.glb';
                   }
 
                 });
@@ -202,7 +203,7 @@ String ReceivedText ='' ;
   void initState() {
     // TODO: implement initState
     super.initState();
-    appel();
+   // appel();
   }
 
 void appel() async{
